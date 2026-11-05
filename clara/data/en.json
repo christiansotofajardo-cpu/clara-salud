@@ -1,0 +1,302 @@
+
+{
+  "locale": "en",
+  "module": "Emergency Contraception",
+  "version": "0.1.0",
+  "review_status": "EDUCATIONAL DRAFT - CLINICAL REVIEW PENDING",
+  "sources": [
+    {
+      "id": "who",
+      "name": "WHO - Emergency contraception",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/emergency-contraception"
+    },
+    {
+      "id": "cdc",
+      "name": "CDC - Emergency contraception",
+      "url": "https://www.cdc.gov/contraception/hcp/usspr/emergency-contraception.html"
+    },
+    {
+      "id": "minsal",
+      "name": "Chile Ministry of Health - Sexual and reproductive health",
+      "url": "https://www.minsal.cl/salud-sexual-y-reproductiva-preguntas-frecuentes/"
+    },
+    {
+      "id": "pep",
+      "name": "WHO - HIV post-exposure prophylaxis",
+      "url": "https://www.who.int/publications/i/item/9789240095137"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "que-es",
+      "label": "What is emergency contraception?",
+      "keywords": [
+        "what is emergency contraception",
+        "morning after pill",
+        "prevent pregnancy",
+        "unprotected sex",
+        "condom broke",
+        "contraceptive failure",
+        "how does it work"
+      ],
+      "answer": "Emergency contraception includes methods that can prevent pregnancy after unprotected sex or contraceptive failure. Options include emergency contraceptive pills and the copper intrauterine device (IUD). Acting as soon as possible is important. Healthcare professionals and pharmacists can help identify available and appropriate options.",
+      "next": "Would you like to learn about the available methods or the recommended time window?",
+      "source_ids": ["who", "cdc"]
+    },
+    {
+      "id": "cuando",
+      "label": "How much time do I have?",
+      "keywords": [
+        "how much time",
+        "how many hours",
+        "time limit",
+        "five days",
+        "120 hours",
+        "72 hours",
+        "when should I take it",
+        "two days ago",
+        "three days ago",
+        "four days ago",
+        "emergency contraception timing"
+      ],
+      "answer": "Emergency contraception should be used as soon as possible, generally within five days after unprotected sex. Ulipristal acetate and levonorgestrel emergency contraceptive pills can be used within this window, although levonorgestrel may be less effective after the first three days. A copper IUD inserted by a trained healthcare professional is the most effective emergency contraceptive method. If this concerns a recent event, seek professional advice promptly rather than waiting to complete this educational activity.",
+      "next": "Would you like to compare emergency contraceptive pills and the copper IUD?",
+      "source_ids": ["who", "cdc"]
+    },
+    {
+      "id": "metodos",
+      "label": "What methods are available?",
+      "keywords": [
+        "available methods",
+        "contraception options",
+        "levonorgestrel",
+        "ulipristal",
+        "copper IUD",
+        "emergency pills",
+        "types of emergency contraception"
+      ],
+      "answer": "Emergency contraception options include pills containing levonorgestrel or ulipristal acetate and the copper intrauterine device (IUD). Their effectiveness and suitability depend on factors such as time since unprotected sex and individual circumstances. The copper IUD is the most effective emergency contraceptive method and can also provide ongoing contraception. A healthcare professional can help determine which method is appropriate.",
+      "next": "Would you like to understand how these methods prevent pregnancy?",
+      "source_ids": ["who", "cdc"]
+    },
+    {
+      "id": "aborto",
+      "label": "Does emergency contraception cause abortion?",
+      "keywords": [
+        "abortion",
+        "abortifacient",
+        "terminate pregnancy",
+        "existing pregnancy",
+        "implantation",
+        "does it cause abortion",
+        "is it an abortion pill"
+      ],
+      "answer": "No. Emergency contraceptive pills mainly work by preventing or delaying ovulation. They do not cause abortion or interrupt an established pregnancy. The copper IUD prevents fertilization. Emergency contraception is different from medication used to end an established pregnancy. If you think you may already be pregnant, seek appropriate medical guidance.",
+      "next": "Would you like to explain in your own words the difference between preventing and ending a pregnancy?",
+      "source_ids": ["who"]
+    },
+    {
+      "id": "eficacia",
+      "label": "Is emergency contraception always effective?",
+      "keywords": [
+        "effectiveness",
+        "efficacy",
+        "100 percent effective",
+        "does it always work",
+        "pregnancy risk",
+        "can it fail",
+        "guaranteed protection"
+      ],
+      "answer": "No emergency contraceptive method guarantees pregnancy prevention in every situation. Effectiveness depends on the method used and the time elapsed. The copper IUD is the most effective emergency contraceptive option. If pregnancy is a concern after using emergency contraception, seek healthcare guidance and consider a pregnancy test at the appropriate time.",
+      "next": "Would you like to know when a pregnancy test may be appropriate?",
+      "source_ids": ["who", "cdc"]
+    },
+    {
+      "id": "its",
+      "label": "Does emergency contraception prevent sexually transmitted infections?",
+      "keywords": [
+        "sexually transmitted infections",
+        "STI",
+        "STD",
+        "HIV",
+        "AIDS",
+        "infection prevention",
+        "condom protection"
+      ],
+      "answer": "No. Emergency contraception can prevent pregnancy, but it does not protect against sexually transmitted infections, including HIV. Condoms help reduce the risk of many sexually transmitted infections. Following a possible HIV exposure, post-exposure prophylaxis (PEP) may be needed. When indicated, it must be started as soon as possible and no later than 72 hours after exposure. Seek urgent medical advice if exposure may have occurred.",
+      "next": "Would you like to understand how condoms and emergency contraception serve different purposes?",
+      "source_ids": ["cdc", "pep"]
+    },
+    {
+      "id": "efectos",
+      "label": "What side effects are possible?",
+      "keywords": [
+        "side effects",
+        "nausea",
+        "vomiting",
+        "headache",
+        "bleeding",
+        "fatigue",
+        "abdominal pain",
+        "is it safe"
+      ],
+      "answer": "Emergency contraceptive pills may cause temporary effects such as nausea, fatigue, headache, or changes in menstrual bleeding. These effects are usually mild. Severe abdominal pain, fainting, or heavy bleeding requires urgent medical assessment. If vomiting occurs after taking an emergency contraceptive pill, consult a healthcare professional or pharmacist promptly because another dose may be needed depending on the method and timing.",
+      "next": "Would you like to know what to monitor after using emergency contraception?",
+      "source_ids": ["who"]
+    },
+    {
+      "id": "periodo",
+      "label": "What if my menstrual period is late?",
+      "keywords": [
+        "late period",
+        "missed period",
+        "menstruation",
+        "menstrual delay",
+        "pregnancy test",
+        "period not coming",
+        "bleeding changes"
+      ],
+      "answer": "Menstruation may occur earlier or later than expected after emergency contraception. If no menstrual bleeding occurs within three weeks, take a pregnancy test or seek healthcare guidance. Severe abdominal pain, fainting, or heavy bleeding requires prompt medical evaluation.",
+      "next": "Would you like to understand why emergency contraception is not always effective?",
+      "source_ids": ["cdc", "who"]
+    },
+    {
+      "id": "fertilidad",
+      "label": "Can it affect future fertility?",
+      "keywords": [
+        "future fertility",
+        "infertility",
+        "sterility",
+        "having children later",
+        "fertility problems",
+        "long term effects"
+      ],
+      "answer": "According to the World Health Organization, emergency contraceptive pills do not harm future fertility. Fertility can return without delay after their use. If you have specific fertility concerns or symptoms, a healthcare professional can provide individualized guidance.",
+      "next": "Would you like to know more about temporary side effects?",
+      "source_ids": ["who"]
+    },
+    {
+      "id": "repetir",
+      "label": "Can emergency contraception be used more than once?",
+      "keywords": [
+        "use more than once",
+        "repeated use",
+        "take it again",
+        "frequent use",
+        "multiple times",
+        "regular contraception"
+      ],
+      "answer": "Emergency contraceptive pills can be used more than once, but they are not intended to replace a regular contraceptive method. If emergency contraception is needed repeatedly, a healthcare professional can help identify a more effective ongoing option. Emergency contraception does not automatically protect against pregnancy from later sexual encounters.",
+      "next": "Would you like information about ongoing contraceptive options?",
+      "source_ids": ["who", "cdc"]
+    },
+    {
+      "id": "despues",
+      "label": "What should I do after using it?",
+      "keywords": [
+        "after taking emergency contraception",
+        "what should I do next",
+        "start birth control",
+        "restart contraception",
+        "condom after",
+        "follow up"
+      ],
+      "answer": "After using emergency contraception, consider protection for future sexual activity. The timing for starting or restarting hormonal contraception depends on the emergency pill used. After ulipristal acetate, hormonal contraception should generally not be started or resumed for at least five days. After levonorgestrel, it can generally be started or resumed immediately. Consult a healthcare professional about the appropriate method and how long backup protection is needed.",
+      "next": "If menstrual bleeding does not occur within three weeks, consider a pregnancy test.",
+      "source_ids": ["cdc"]
+    },
+    {
+      "id": "acceso",
+      "label": "Where can I get help in Chile?",
+      "keywords": [
+        "Chile",
+        "health center",
+        "pharmacy",
+        "CESFAM",
+        "where to get emergency contraception",
+        "where to buy",
+        "health services",
+        "midwife"
+      ],
+      "answer": "In Chile, information and advice about contraception may be available through primary healthcare centers, including CESFAM facilities, and pharmacies. Availability of specific methods should be confirmed locally. If emergency contraception may be needed after a recent event, seek assistance promptly.",
+      "next": "Would you like to review the time limits for emergency contraception?",
+      "source_ids": ["minsal"]
+    },
+    {
+      "id": "violencia",
+      "label": "What if sexual violence has occurred?",
+      "keywords": [
+        "sexual assault",
+        "sexual violence",
+        "rape",
+        "sexual abuse",
+        "forced sex",
+        "without consent",
+        "coercion",
+        "assault survivor"
+      ],
+      "answer": "If you have experienced sexual violence, you deserve compassionate, nonjudgmental care. Seek help from an emergency department or healthcare service as soon as possible. Healthcare professionals can assess medical needs, emergency contraception, infection prevention, and access to specialized support. Some HIV prevention interventions must begin within 72 hours of exposure, making prompt assessment important. If you are in immediate danger, contact local emergency services.",
+      "next": "You do not need to share intimate details here to receive general information.",
+      "source_ids": ["who", "pep"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "objetivo",
+      "title": "What emergency contraception can and cannot do",
+      "intro": "Emergency contraception can prevent pregnancy after unprotected sex. Emergency contraceptive pills mainly delay or prevent ovulation. They do not interrupt an established pregnancy.",
+      "question": "In your own words, explain what emergency contraception can do and what it cannot do to an established pregnancy.",
+      "concepts": [
+        {
+          "id": "prevent",
+          "name": "Pregnancy prevention",
+          "hint": "Emergency contraception is intended to prevent pregnancy after unprotected sex."
+        },
+        {
+          "id": "no_abortion",
+          "name": "Does not interrupt an established pregnancy",
+          "hint": "Emergency contraception does not cause abortion or end an established pregnancy."
+        }
+      ],
+      "misconceptions": ["abortion"]
+    },
+    {
+      "id": "tiempo",
+      "title": "Why acting early matters",
+      "intro": "Emergency contraception should be used as soon as possible, generally within five days after unprotected sex. Effectiveness depends on the method and timing.",
+      "question": "Explain why timing matters and describe the general time window for emergency contraception.",
+      "concepts": [
+        {
+          "id": "five_days",
+          "name": "General five-day window",
+          "hint": "Emergency contraception can generally be used within five days, or 120 hours."
+        },
+        {
+          "id": "earlier",
+          "name": "Act as soon as possible",
+          "hint": "Using an appropriate method promptly is important because effectiveness varies by method and timing."
+        }
+      ],
+      "misconceptions": ["wrong_window"]
+    },
+    {
+      "id": "proteccion",
+      "title": "Pregnancy prevention and STI protection",
+      "intro": "Emergency contraception helps prevent pregnancy but does not protect against sexually transmitted infections. Condoms help reduce the risk of many STIs.",
+      "question": "Explain whether emergency contraception protects against STIs and what may help reduce STI risk.",
+      "concepts": [
+        {
+          "id": "not_sti",
+          "name": "Does not protect against STIs",
+          "hint": "Emergency contraception does not prevent sexually transmitted infections."
+        },
+        {
+          "id": "condom",
+          "name": "Condoms help reduce STI risk",
+          "hint": "Condoms help reduce the risk of many sexually transmitted infections."
+        }
+      ],
+      "misconceptions": ["sti_protection"]
+    }
+  ]
+}
