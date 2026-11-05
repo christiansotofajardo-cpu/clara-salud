@@ -1,0 +1,557 @@
+
+{
+  "schema_version": "1.0",
+  "content_version": "0.5.0",
+  "locale": "es",
+  "module": "Salud sexual y reproductiva — biblioteca inicial",
+  "review_status": "BORRADOR EDUCATIVO — PENDIENTE DE REVISIÓN CLÍNICA",
+  "instructions": "Contenido exclusivamente educativo, no diseñado para diagnóstico ni recomendaciones médicas individualizadas; no almacenar preguntas ni datos sensibles.",
+  "sources": [
+    {
+      "id": "oms_urgencia",
+      "name": "OMS · Anticoncepción de urgencia",
+      "url": "https://www.who.int/es/news-room/fact-sheets/detail/emergency-contraception"
+    },
+    {
+      "id": "cdc_urgencia",
+      "name": "CDC · Emergency contraception",
+      "url": "https://www.cdc.gov/contraception/hcp/usspr/emergency-contraception.html"
+    },
+    {
+      "id": "oms_metodos",
+      "name": "OMS · Planificación familiar y métodos anticonceptivos",
+      "url": "https://www.who.int/es/news-room/fact-sheets/detail/family-planning-contraception"
+    },
+    {
+      "id": "cdc_metodos",
+      "name": "CDC · Contraception and Birth Control Methods",
+      "url": "https://www.cdc.gov/contraception/about/index.html"
+    },
+    {
+      "id": "oms_its",
+      "name": "OMS · Infecciones de transmisión sexual",
+      "url": "https://www.who.int/es/news-room/fact-sheets/detail/sexually-transmitted-infections-(stis)"
+    },
+    {
+      "id": "oms_vph",
+      "name": "OMS · Papilomavirus humano y cáncer",
+      "url": "https://www.who.int/es/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer"
+    },
+    {
+      "id": "oms_pep",
+      "name": "OMS · Profilaxis posterior a exposición al VIH",
+      "url": "https://www.who.int/publications/i/item/9789240095137"
+    },
+    {
+      "id": "oms_violencia",
+      "name": "OMS · Violencia contra la mujer",
+      "url": "https://www.who.int/es/news-room/fact-sheets/detail/violence-against-women"
+    }
+  ],
+  "cards": [
+    {
+      "id": "ec_que_es",
+      "topic": "emergencia",
+      "title": "¿Qué es la anticoncepción de emergencia?",
+      "answer": "La anticoncepción de emergencia permite reducir el riesgo de embarazo después de una relación sexual sin protección o de una falla anticonceptiva. Incluye píldoras y el DIU de cobre. No sustituye un método habitual y debe utilizarse lo antes posible.",
+      "aliases": [
+        "anticoncepción de emergencia",
+        "pastilla del día después",
+        "qué hacer después de sexo sin protección",
+        "anticoncepción postcoital"
+      ],
+      "source_ids": ["oms_urgencia", "cdc_urgencia"],
+      "related": ["ec_plazo", "ec_metodos"],
+      "follow_up": "¿Quieres conocer los métodos disponibles o los plazos?",
+      "risk": "general"
+    },
+    {
+      "id": "ec_plazo",
+      "topic": "emergencia",
+      "title": "¿Cuánto tiempo tengo para actuar?",
+      "answer": "En general hay opciones de anticoncepción de emergencia dentro de los cinco días posteriores a la relación sexual; cuanto antes se busque orientación, mejor. La eficacia varía entre métodos y con el tiempo. Si se trata de una situación reciente, consulta a un servicio sanitario sin esperar a completar esta actividad.",
+      "aliases": [
+        "cuánto tiempo tengo",
+        "pasaron cuatro días",
+        "hace tres días tuve relaciones",
+        "120 horas",
+        "72 horas anticoncepción",
+        "plazo pastilla emergencia"
+      ],
+      "source_ids": ["oms_urgencia", "cdc_urgencia"],
+      "related": ["ec_metodos", "ec_diu_cobre"],
+      "follow_up": "¿Quieres comparar las píldoras con el DIU de cobre?",
+      "risk": "time_sensitive"
+    },
+    {
+      "id": "ec_metodos",
+      "topic": "emergencia",
+      "title": "¿Qué opciones de emergencia existen?",
+      "answer": "Las opciones incluyen píldoras con levonorgestrel, píldoras con acetato de ulipristal y DIU de cobre. En algunos contextos se utilizan también anticonceptivos orales combinados bajo pautas específicas. El DIU de cobre es el método de emergencia más eficaz; debe colocarlo personal sanitario. La elección requiere considerar tiempo y circunstancias individuales.",
+      "aliases": [
+        "mejores anticonceptivos de emergencia",
+        "qué pastilla de emergencia es mejor",
+        "comparar métodos de emergencia",
+        "opciones de emergencia",
+        "buenos anticonceptivos de urgencia"
+      ],
+      "source_ids": ["oms_urgencia", "cdc_urgencia"],
+      "related": ["ec_levonorgestrel", "ec_ulipristal", "ec_diu_cobre"],
+      "follow_up": "¿Quieres información sobre levonorgestrel, ulipristal o DIU de cobre?",
+      "risk": "general"
+    },
+    {
+      "id": "ec_levonorgestrel",
+      "topic": "emergencia",
+      "title": "¿Qué es el levonorgestrel de emergencia?",
+      "answer": "El levonorgestrel es una de las sustancias utilizadas en píldoras anticonceptivas de emergencia. Conviene utilizarlo lo antes posible; puede emplearse dentro de cinco días, aunque su eficacia puede disminuir después de los primeros tres días. No protege de infecciones de transmisión sexual y no sustituye la anticoncepción regular.",
+      "aliases": [
+        "levonorgestrel",
+        "pastilla levonorgestrel",
+        "pastilla de 72 horas",
+        "diferencia levonorgestrel y ulipristal"
+      ],
+      "source_ids": ["oms_urgencia", "cdc_urgencia"],
+      "related": ["ec_ulipristal", "ec_plazo"],
+      "follow_up": "¿Quieres saber cómo se diferencia del ulipristal?",
+      "risk": "general"
+    },
+    {
+      "id": "ec_ulipristal",
+      "topic": "emergencia",
+      "title": "¿Qué es el acetato de ulipristal?",
+      "answer": "El acetato de ulipristal es un fármaco usado en anticoncepción de emergencia. Puede utilizarse dentro de cinco días de la relación sexual. Entre el tercer y el quinto día, suele resultar más eficaz que las píldoras de levonorgestrel. Después de usarlo, el inicio o reinicio de anticonceptivos hormonales requiere orientación específica por posibles interacciones de eficacia.",
+      "aliases": [
+        "ulipristal",
+        "acetato de ulipristal",
+        "pastilla cinco días",
+        "ulipristal versus levonorgestrel"
+      ],
+      "source_ids": ["oms_urgencia", "cdc_urgencia"],
+      "related": ["ec_continuar", "ec_plazo"],
+      "follow_up": "¿Quieres conocer las precauciones al retomar anticoncepción habitual?",
+      "risk": "general"
+    },
+    {
+      "id": "ec_diu_cobre",
+      "topic": "emergencia",
+      "title": "¿Puede utilizarse el DIU de cobre como anticoncepción de emergencia?",
+      "answer": "Sí. Un DIU de cobre colocado por un profesional sanitario dentro de la ventana apropiada puede prevenir un embarazo después de una relación sin protección. Es la alternativa de emergencia más eficaz y también puede permanecer como método habitual. La indicación y colocación requieren evaluación profesional.",
+      "aliases": [
+        "diu de cobre emergencia",
+        "t de cobre después de relaciones",
+        "cuál es el más eficaz",
+        "dispositivo intrauterino emergencia"
+      ],
+      "source_ids": ["oms_urgencia", "cdc_urgencia"],
+      "related": ["ec_metodos", "regular_diu"],
+      "follow_up": "¿Quieres saber cómo se diferencia de las píldoras?",
+      "risk": "general"
+    },
+    {
+      "id": "ec_no_aborto",
+      "topic": "emergencia",
+      "title": "¿La anticoncepción de emergencia causa un aborto?",
+      "answer": "No. La anticoncepción de emergencia evita o reduce la posibilidad de que se establezca un embarazo; las píldoras actúan principalmente retrasando o impidiendo la ovulación. No interrumpen un embarazo ya establecido y no son medicamentos para producir un aborto.",
+      "aliases": [
+        "es abortiva",
+        "provoca aborto",
+        "estoy embarazada y tomé la pastilla",
+        "interrumpe embarazo",
+        "mata embrión"
+      ],
+      "source_ids": ["oms_urgencia"],
+      "related": ["ec_que_es"],
+      "follow_up": "¿Quieres explicar con tus palabras la diferencia entre prevenir e interrumpir un embarazo?",
+      "risk": "general"
+    },
+    {
+      "id": "ec_eficacia",
+      "topic": "emergencia",
+      "title": "¿La anticoncepción de emergencia funciona siempre?",
+      "answer": "No es 100 % eficaz. Su capacidad para prevenir un embarazo depende del método, del momento de uso y de otras circunstancias. El DIU de cobre es la opción de emergencia más eficaz. Si hay preocupación por un embarazo después de usar un método, considera una prueba de embarazo en el momento adecuado y consulta con personal sanitario.",
+      "aliases": [
+        "funciona siempre",
+        "es 100 por ciento segura",
+        "qué pasa si falla",
+        "eficacia pastilla del día después",
+        "es efectiva"
+      ],
+      "source_ids": ["oms_urgencia", "cdc_urgencia"],
+      "related": ["ec_prueba", "ec_diu_cobre"],
+      "follow_up": "¿Quieres saber cuándo considerar una prueba de embarazo?",
+      "risk": "general"
+    },
+    {
+      "id": "ec_condon_roto",
+      "topic": "emergencia",
+      "title": "¿Qué hago si se rompió o deslizó el preservativo?",
+      "answer": "Si el preservativo se rompió o deslizó durante una relación y existe riesgo de embarazo, consulta cuanto antes sobre anticoncepción de emergencia. También puede ser pertinente evaluar el riesgo de infecciones de transmisión sexual. Si hubo posible exposición al VIH, algunas intervenciones preventivas requieren atención urgente.",
+      "aliases": [
+        "se rompió el condón",
+        "se rompió el preservativo",
+        "el condón se salió",
+        "falló el condón",
+        "preservativo falló ayer"
+      ],
+      "source_ids": ["oms_urgencia", "cdc_urgencia", "oms_pep"],
+      "related": ["ec_plazo", "its_pep"],
+      "follow_up": "¿Quieres revisar los plazos de anticoncepción de emergencia o la prevención de ITS?",
+      "risk": "time_sensitive"
+    },
+    {
+      "id": "ec_olvido",
+      "topic": "emergencia",
+      "title": "¿Qué ocurre si olvidé mi método anticonceptivo?",
+      "answer": "Olvidar píldoras o retrasar un método puede disminuir su protección, pero la respuesta depende del tipo de anticonceptivo y del momento. En algunas situaciones se considera anticoncepción de emergencia. No existe una única pauta válida para todos los métodos: consulta el prospecto específico y solicita orientación sanitaria con prontitud.",
+      "aliases": [
+        "olvidé una pastilla",
+        "olvidé anticonceptivos",
+        "se me olvidó tomar",
+        "atrasé inyección",
+        "fallo anticonceptivo regular"
+      ],
+      "source_ids": ["oms_urgencia", "cdc_urgencia"],
+      "related": ["ec_plazo", "ec_metodos"],
+      "follow_up": "¿Quieres saber qué opciones de anticoncepción de emergencia existen?",
+      "risk": "time_sensitive"
+    },
+    {
+      "id": "ec_vomitos",
+      "topic": "emergencia",
+      "title": "¿Qué pasa si vomité después de tomar una píldora?",
+      "answer": "Si vomitaste poco tiempo después de usar una píldora de emergencia, la absorción puede verse afectada y quizá se necesite otra dosis. El intervalo relevante depende del producto y de las recomendaciones clínicas aplicables. Consulta cuanto antes con una matrona, un profesional sanitario o una farmacia para verificar cómo proceder.",
+      "aliases": [
+        "vomité la pastilla",
+        "vomito después de anticonceptivo emergencia",
+        "náuseas y pastilla",
+        "repetir dosis por vómito"
+      ],
+      "source_ids": ["oms_urgencia", "cdc_urgencia"],
+      "related": ["ec_efectos"],
+      "follow_up": "¿Quieres conocer otros efectos secundarios frecuentes?",
+      "risk": "time_sensitive"
+    },
+    {
+      "id": "ec_efectos",
+      "topic": "emergencia",
+      "title": "¿Qué efectos secundarios pueden aparecer?",
+      "answer": "Las píldoras anticonceptivas de emergencia pueden producir náuseas, cansancio o cambios temporales en el sangrado menstrual. Suelen ser efectos leves. Dolor abdominal muy intenso, desmayo o sangrado muy abundante son señales para buscar evaluación médica urgente; CLARA no puede determinar su causa.",
+      "aliases": [
+        "efectos secundarios",
+        "me siento mal tras pastilla",
+        "dolor de cabeza",
+        "sangrado después de pastilla",
+        "náuseas"
+      ],
+      "source_ids": ["oms_urgencia"],
+      "related": ["seg_sintomas", "ec_prueba"],
+      "follow_up": "¿Quieres saber cuándo considerar una prueba de embarazo?",
+      "risk": "general"
+    },
+    {
+      "id": "ec_prueba",
+      "topic": "emergencia",
+      "title": "¿Cuándo debo considerar una prueba de embarazo?",
+      "answer": "Después de usar anticoncepción de emergencia, la menstruación puede cambiar. Si no hay sangrado menstrual dentro de las tres semanas siguientes, las guías recomiendan realizar una prueba de embarazo. Si hay dolor intenso, desmayo o sangrado abundante, es importante buscar atención médica sin demora.",
+      "aliases": [
+        "no me llega la regla",
+        "atraso menstrual después de pastilla",
+        "test de embarazo",
+        "cuándo saber si estoy embarazada",
+        "prueba de embarazo"
+      ],
+      "source_ids": ["cdc_urgencia", "oms_urgencia"],
+      "related": ["seg_sintomas"],
+      "follow_up": "¿Quieres revisar las señales que requieren atención sanitaria?",
+      "risk": "general"
+    },
+    {
+      "id": "ec_repetir",
+      "topic": "emergencia",
+      "title": "¿Se puede utilizar anticoncepción de emergencia más de una vez?",
+      "answer": "La anticoncepción de emergencia puede ser necesaria más de una vez. Sin embargo, no está pensada como sustituto de un método anticonceptivo habitual. Si la necesitas con frecuencia, un profesional sanitario puede ayudarte a evaluar opciones regulares eficaces y acordes con tus preferencias.",
+      "aliases": [
+        "tomar varias veces",
+        "pastilla dos veces en el mes",
+        "uso frecuente emergencia",
+        "se puede repetir"
+      ],
+      "source_ids": ["oms_urgencia", "cdc_urgencia"],
+      "related": ["regular_comparar"],
+      "follow_up": "¿Quieres conocer métodos anticonceptivos de uso habitual?",
+      "risk": "general"
+    },
+    {
+      "id": "ec_continuar",
+      "topic": "emergencia",
+      "title": "¿Cómo retomo la anticoncepción habitual después?",
+      "answer": "La recomendación depende de la píldora de emergencia utilizada. Tras levonorgestrel suele ser posible iniciar o retomar anticoncepción hormonal inmediatamente; tras ulipristal se recomienda esperar al menos cinco días antes de iniciarla o retomarla. Puede ser necesario usar preservativo como respaldo. Solicita orientación según el producto y tu situación.",
+      "aliases": [
+        "seguir anticonceptivos después",
+        "reanudar pastillas tras emergencia",
+        "ulipristal y anticonceptivos habituales",
+        "comenzar píldora después"
+      ],
+      "source_ids": ["cdc_urgencia", "oms_urgencia"],
+      "related": ["ec_ulipristal", "regular_pildoras"],
+      "follow_up": "¿Quieres conocer las diferencias entre anticoncepción regular y de emergencia?",
+      "risk": "general"
+    },
+    {
+      "id": "regular_intro",
+      "topic": "anticoncepcion_regular",
+      "title": "¿Qué métodos anticonceptivos existen?",
+      "answer": "Existen métodos reversibles de larga duración como implantes y DIU; métodos hormonales como píldoras, inyecciones, parches y anillos; métodos de barrera como preservativos; y opciones permanentes. No existe una opción única para todas las personas. La elección debe ser informada y voluntaria.",
+      "aliases": [
+        "anticonceptivos",
+        "métodos para no embarazarme",
+        "tipos de anticonceptivos",
+        "planificación familiar",
+        "opciones para prevenir embarazo"
+      ],
+      "source_ids": ["oms_metodos", "cdc_metodos"],
+      "related": ["regular_comparar", "regular_preservativos"],
+      "follow_up": "¿Quieres comparar métodos según duración, hormonas y protección contra ITS?",
+      "risk": "general"
+    },
+    {
+      "id": "regular_comparar",
+      "topic": "anticoncepcion_regular",
+      "title": "¿Cuáles son los métodos anticonceptivos más eficaces?",
+      "answer": "Los implantes y los dispositivos intrauterinos están entre los métodos reversibles más eficaces para prevenir embarazos. Las píldoras, los parches, los anillos y las inyecciones también pueden ser eficaces, pero dependen más de su uso correcto y oportuno. Los preservativos además ayudan a prevenir ITS. La mejor elección depende de necesidades y condiciones individuales.",
+      "aliases": [
+        "mejores anticonceptivos",
+        "método más eficaz",
+        "buenos anticonceptivos",
+        "cuál anticonceptivo recomiendas",
+        "comparar anticonceptivos"
+      ],
+      "source_ids": ["oms_metodos", "cdc_metodos"],
+      "related": ["regular_implante", "regular_diu", "regular_preservativos"],
+      "follow_up": "¿Prefieres conocer métodos de larga duración o sin hormonas?",
+      "risk": "general"
+    },
+    {
+      "id": "regular_implante",
+      "topic": "anticoncepcion_regular",
+      "title": "¿Qué es un implante anticonceptivo?",
+      "answer": "El implante anticonceptivo es un método reversible de larga duración que se coloca bajo la piel del brazo por personal capacitado. Libera una hormona para prevenir embarazos y es muy eficaz. No protege contra las ITS. La duración y características dependen del producto disponible.",
+      "aliases": [
+        "implante subdérmico",
+        "anticonceptivo en el brazo",
+        "implante hormonal",
+        "chip anticonceptivo"
+      ],
+      "source_ids": ["oms_metodos", "cdc_metodos"],
+      "related": ["regular_comparar", "regular_preservativos"],
+      "follow_up": "¿Quieres compararlo con el DIU?",
+      "risk": "general"
+    },
+    {
+      "id": "regular_diu",
+      "topic": "anticoncepcion_regular",
+      "title": "¿Qué diferencias hay entre DIU de cobre y hormonal?",
+      "answer": "Ambos son métodos reversibles de larga duración colocados por personal sanitario. El DIU de cobre no contiene hormonas; algunos DIU liberan una hormona de tipo progestágeno. Los dos son muy eficaces para prevenir embarazos, pero no protegen de ITS. La elección requiere considerar preferencias, antecedentes y efectos posibles.",
+      "aliases": [
+        "diu cobre versus hormonal",
+        "t de cobre",
+        "dispositivo intrauterino",
+        "diu sin hormonas",
+        "qué diu es mejor"
+      ],
+      "source_ids": ["oms_metodos", "cdc_metodos"],
+      "related": ["regular_sin_hormonas", "ec_diu_cobre"],
+      "follow_up": "¿Quieres revisar otras opciones sin hormonas?",
+      "risk": "general"
+    },
+    {
+      "id": "regular_pildoras",
+      "topic": "anticoncepcion_regular",
+      "title": "¿Cómo funcionan las píldoras anticonceptivas habituales?",
+      "answer": "Las píldoras anticonceptivas son un método hormonal de uso regular; existen formulaciones combinadas y otras solo con progestágeno. Su eficacia depende de utilizarlas correctamente. No protegen contra ITS y algunas formulaciones requieren precauciones según los antecedentes personales. Una matrona o profesional sanitario puede orientar la elección.",
+      "aliases": [
+        "pastillas anticonceptivas diarias",
+        "píldora combinada",
+        "minipíldora",
+        "anticonceptivos hormonales orales",
+        "tomar pastillas"
+      ],
+      "source_ids": ["oms_metodos", "cdc_metodos"],
+      "related": ["ec_olvido", "regular_comparar"],
+      "follow_up": "¿Quieres información sobre métodos que no requieren tomarse diariamente?",
+      "risk": "general"
+    },
+    {
+      "id": "regular_sin_hormonas",
+      "topic": "anticoncepcion_regular",
+      "title": "¿Qué opciones anticonceptivas no contienen hormonas?",
+      "answer": "Entre las alternativas no hormonales se encuentran el DIU de cobre y los preservativos. También existen otros métodos de barrera y métodos basados en el reconocimiento de la fertilidad, con eficacia variable. Los preservativos ayudan además a reducir el riesgo de ITS; el DIU de cobre no ofrece esa protección.",
+      "aliases": [
+        "anticonceptivos sin hormonas",
+        "método natural",
+        "no quiero hormonas",
+        "alternativas no hormonales",
+        "sin estrógeno"
+      ],
+      "source_ids": ["oms_metodos", "cdc_metodos"],
+      "related": ["regular_diu", "regular_preservativos"],
+      "follow_up": "¿Quieres comparar DIU de cobre y preservativos?",
+      "risk": "general"
+    },
+    {
+      "id": "regular_preservativos",
+      "topic": "anticoncepcion_regular",
+      "title": "¿Para qué sirven los preservativos?",
+      "answer": "Los preservativos ayudan a prevenir el embarazo y reducen el riesgo de muchas infecciones de transmisión sexual, incluido el VIH, cuando se usan de forma correcta y constante. Pueden combinarse con otro método anticonceptivo para ampliar la protección. No eliminan por completo todos los riesgos.",
+      "aliases": [
+        "condón",
+        "preservativo",
+        "doble protección",
+        "protege del vih",
+        "condones y embarazo"
+      ],
+      "source_ids": ["oms_metodos", "cdc_metodos", "oms_its"],
+      "related": ["its_general", "ec_condon_roto"],
+      "follow_up": "¿Quieres conocer qué hacer si un preservativo falla?",
+      "risk": "general"
+    },
+    {
+      "id": "regular_adolescentes",
+      "topic": "anticoncepcion_regular",
+      "title": "¿Qué métodos pueden considerar las adolescentes?",
+      "answer": "Las adolescentes deben tener acceso a información clara, confidencial y sin juicios sobre anticoncepción. No existe un método que sea universalmente el mejor por la edad solamente. La elección depende de preferencias, necesidades y situación de salud, y requiere orientación profesional respetuosa de los derechos y la normativa local. Los preservativos aportan protección frente a muchas ITS.",
+      "aliases": [
+        "anticonceptivo si tengo 17",
+        "contracepción adolescente",
+        "qué es mejor para una adolescente",
+        "soy menor de edad",
+        "anticonceptivos jóvenes"
+      ],
+      "source_ids": ["oms_metodos", "cdc_metodos"],
+      "related": ["regular_comparar", "regular_preservativos"],
+      "follow_up": "¿Quieres comparar características generales de los distintos métodos?",
+      "risk": "general"
+    },
+    {
+      "id": "regular_fertilidad",
+      "topic": "anticoncepcion_regular",
+      "title": "¿Los anticonceptivos afectan la fertilidad futura?",
+      "answer": "La mayoría de los métodos anticonceptivos reversibles permiten recuperar la fertilidad al suspender su uso o retirarlos, aunque el tiempo puede variar por método y persona. Las píldoras de emergencia no dañan la fertilidad futura. Las inquietudes individuales sobre fertilidad requieren evaluación sanitaria.",
+      "aliases": [
+        "anticonceptivos causan infertilidad",
+        "me dejará estéril",
+        "podré tener hijos después",
+        "fertilidad después de pastillas"
+      ],
+      "source_ids": ["oms_metodos", "oms_urgencia"],
+      "related": ["regular_intro", "ec_que_es"],
+      "follow_up": "¿Quieres conocer las diferencias entre métodos reversibles?",
+      "risk": "general"
+    },
+    {
+      "id": "its_general",
+      "topic": "its",
+      "title": "¿Qué son las infecciones de transmisión sexual?",
+      "answer": "Las infecciones de transmisión sexual (ITS) pueden transmitirse por contacto sexual y muchas no producen síntomas. La prevención incluye el uso correcto de preservativos, vacunas cuando corresponda, pruebas y acceso a atención sanitaria. La anticoncepción de emergencia no protege contra ITS.",
+      "aliases": [
+        "qué es una its",
+        "infecciones sexuales",
+        "enfermedades de transmisión sexual",
+        "síntomas de ets",
+        "prevención its"
+      ],
+      "source_ids": ["oms_its"],
+      "related": ["its_pruebas", "regular_preservativos"],
+      "follow_up": "¿Quieres saber por qué puede ser importante hacerse pruebas aun sin síntomas?",
+      "risk": "general"
+    },
+    {
+      "id": "its_pep",
+      "topic": "its",
+      "title": "¿Qué hacer ante una posible exposición al VIH?",
+      "answer": "Si crees que pudo existir una exposición al VIH, busca atención sanitaria urgente. La profilaxis posexposición (PEP) puede reducir el riesgo cuando está indicada y debe iniciarse cuanto antes, idealmente dentro de 24 horas y nunca después de 72 horas. CLARA no puede determinar si una persona necesita PEP: eso requiere evaluación clínica.",
+      "aliases": [
+        "posible contagio vih",
+        "tuve exposición al vih",
+        "profilaxis post exposición",
+        "pep",
+        "vih después de relación"
+      ],
+      "source_ids": ["oms_pep", "oms_its"],
+      "related": ["seg_violencia", "its_pruebas"],
+      "follow_up": "¿Quieres información general sobre prevención y pruebas de ITS?",
+      "risk": "urgent"
+    },
+    {
+      "id": "its_vph",
+      "topic": "its",
+      "title": "¿Qué es el VPH y cómo se previene?",
+      "answer": "El virus del papiloma humano (VPH) es frecuente y puede transmitirse por contacto sexual. Algunas infecciones persistentes se relacionan con cánceres, incluido el cervicouterino. La vacunación y los programas de detección recomendados contribuyen a la prevención. Los preservativos reducen, pero no eliminan, el riesgo de transmisión del VPH.",
+      "aliases": [
+        "vph",
+        "papiloma humano",
+        "vacuna contra vph",
+        "cáncer cervicouterino",
+        "virus papiloma"
+      ],
+      "source_ids": ["oms_vph"],
+      "related": ["its_general", "its_pruebas"],
+      "follow_up": "¿Quieres comprender la diferencia entre vacunación y pruebas de detección?",
+      "risk": "general"
+    },
+    {
+      "id": "its_pruebas",
+      "topic": "its",
+      "title": "¿Cuándo conviene consultar por pruebas de ITS?",
+      "answer": "Muchas ITS pueden ser asintomáticas. Si hubo exposición, síntomas o dudas, un servicio sanitario puede orientar qué pruebas son pertinentes y cuándo realizarlas; los intervalos dependen de la infección y la exposición. CLARA no interpreta resultados de laboratorio ni sustituye una evaluación clínica.",
+      "aliases": [
+        "test de its",
+        "prueba de vih",
+        "examen infección sexual",
+        "me hago pruebas aunque no tenga síntomas",
+        "diagnóstico its"
+      ],
+      "source_ids": ["oms_its"],
+      "related": ["its_general", "its_pep"],
+      "follow_up": "¿Quieres conocer medidas generales para reducir el riesgo de ITS?",
+      "risk": "general"
+    },
+    {
+      "id": "seg_violencia",
+      "topic": "seguridad",
+      "title": "¿Qué hacer si hubo violencia o coerción sexual?",
+      "answer": "Si ocurrió una agresión sexual, busca atención médica y apoyo especializado cuanto antes. Un equipo sanitario puede evaluar lesiones, prevención de embarazo e infecciones, y opciones de acompañamiento. No necesitas describir detalles íntimos en CLARA para recibir orientación general. Si hay peligro inmediato, contacta servicios de emergencia locales o a una persona de confianza.",
+      "aliases": [
+        "violación",
+        "abuso sexual",
+        "me obligaron",
+        "sin consentimiento",
+        "agresión sexual",
+        "violencia sexual"
+      ],
+      "source_ids": ["oms_violencia", "oms_urgencia", "oms_pep"],
+      "related": ["its_pep", "ec_plazo"],
+      "follow_up": "La prioridad es tu seguridad y una atención respetuosa y oportuna.",
+      "risk": "urgent"
+    },
+    {
+      "id": "seg_sintomas",
+      "topic": "seguridad",
+      "title": "¿Qué síntomas requieren atención sanitaria urgente?",
+      "answer": "Dolor abdominal muy intenso, desmayo, sangrado muy abundante u otros síntomas graves requieren evaluación médica urgente. CLARA no puede determinar la causa ni descartar una urgencia a través de mensajes. Si tienes síntomas graves, solicita atención inmediata y no esperes una respuesta automatizada.",
+      "aliases": [
+        "sangrado abundante",
+        "dolor intenso",
+        "desmayo",
+        "me duele mucho el vientre",
+        "hemorragia",
+        "urgencia médica"
+      ],
+      "source_ids": ["oms_urgencia", "oms_violencia"],
+      "related": ["ec_efectos"],
+      "follow_up": "Si tienes síntomas graves, busca atención médica ahora.",
+      "risk": "urgent"
+    }
+  ]
+}
