@@ -1,5 +1,5 @@
 
-"""CLARA Salud — motor educativo en español, versión 0.3.
+"""CLARA Salud — motor educativo en español, versión 0.4.
 
 Repositorio abierto e independiente de tecnologías propietarias.
 Respuestas acotadas a contenido documentado; evaluación heurística,
@@ -15,6 +15,7 @@ import unicodedata
 from functools import lru_cache
 from pathlib import Path
 
+ENGINE_VERSION = "0.4.0"
 DATA = Path(__file__).resolve().parent / "data" / "es.json"
 SOURCE_ALLOWLIST = (
     "https://www.who.int/",
@@ -182,7 +183,7 @@ def answer_question(question):
     ):
         return _format_answer(_faq("efectos"), warning=True)
 
-    # Preguntas personales de riesgo/contraindicaciones requieren atención individual.
+    # Preguntas personales de riesgo/contraindicaciones.
     if matches(
         n,
         r"\b(cancer|trombosis|coagulos|anticoagulantes|"
@@ -196,6 +197,7 @@ def answer_question(question):
         r"\b(emergencia|urgencia|postcoital|dia despues|"
         r"pastilla del dia siguiente|pildora del dia siguiente)\b",
     )
+
     general = matches(
         n,
         r"\b(anticonceptiv\w*|anticoncepcion regular|"
@@ -205,30 +207,72 @@ def answer_question(question):
         and matches(n, r"\b(embaraz\w*|no embarazarme|evitar embarazo)\b")
     )
 
-    # La anticoncepción general no debe redirigirse a la de emergencia.
+    # Preguntas generales sobre anticoncepción habitual.
     if general and not emergency:
         return _general_contraception()
 
-    # Rutas explícitas del módulo de anticoncepción de emergencia.
+    # Preguntas sobre métodos de anticoncepción de emergencia.
+    # Ejemplo: ¿Cuáles son buenos anticonceptivos de emergencia?
+    if emergency and matches(
+        n,
+        r"\b(cual(?:es)?|que|mejor(?:es)?|buen(?:os|as)?|"
+        r"eficaz(?:es)?|efectiv(?:os|as)?|opciones|tipos|"
+        r"metodos?|comparar|recomiend\w*|elegir)\b",
+    ) and matches(
+        n,
+        r"\b(anticonceptiv\w*|metodos?|opciones|pildoras?|pastillas?|diu)\b",
+    ):
+        if not matches(
+            n,
+            r"\b(cuando|cuanto tiempo|horas|dias|vomit\w*|"
+            r"nausea\w*|efectos|aborto|abortiva|menstruacion|"
+            r"regla|its|ets|vih|sida)\b",
+        ):
+            return _format_answer(_faq("metodos"))
+
+    # Identificación de temas específicos.
     routes = [
-        ("efectos", r"\b(vomit\w*|nausea\w*|efectos secundarios)\b"),
-        ("fertilidad", r"\b(fertilidad|infertilidad|esterilidad)\b"),
-        ("its", r"\b(its|ets|vih|sida|infecciones? de transmision|"
-         r"enfermedades? de transmision)\b"),
-        ("aborto", r"\b(aborto|abortiva|embarazo establecido|"
-         r"interrumpe (?:un |el )?embarazo)\b"),
-        ("periodo", r"\b(menstruacion|regla atrasada|retraso menstrual|"
-         r"prueba de embarazo|test de embarazo)\b"),
-        ("cuando", r"\b(\d|dos|tres|cuatro|cinco)\s+dias\b|"
-         r"\b(\d+|\d{2,3})\s+horas\b"),
-        ("acceso", r"\b(cesfam|farmacia|consultorio|donde conseguir|"
-         r"donde comprar)\b"),
+        (
+            "efectos",
+            r"\b(vomit\w*|nausea\w*|efectos secundarios)\b",
+        ),
+        (
+            "fertilidad",
+            r"\b(fertilidad|infertilidad|esterilidad)\b",
+        ),
+        (
+            "its",
+            r"\b(its|ets|vih|sida|infecciones? de transmision|"
+            r"enfermedades? de transmision)\b",
+        ),
+        (
+            "aborto",
+            r"\b(aborto|abortiva|embarazo establecido|"
+            r"interrumpe (?:un |el )?embarazo)\b",
+        ),
+        (
+            "periodo",
+            r"\b(menstruacion|regla atrasada|retraso menstrual|"
+            r"prueba de embarazo|test de embarazo)\b",
+        ),
+        (
+            "cuando",
+            r"\b(\d|dos|tres|cuatro|cinco)\s+dias\b|"
+            r"\b(\d+|\d{2,3})\s+horas\b|"
+            r"\b(cuanto|cuantos|cuantas)\s+(tiempo|dias|horas)\b",
+        ),
+        (
+            "acceso",
+            r"\b(cesfam|farmacia|consultorio|donde conseguir|"
+            r"donde comprar|donde consigo|donde obtengo)\b",
+        ),
     ]
 
     for faq_id, pattern in routes:
         if re.search(pattern, n):
             return _format_answer(_faq(faq_id))
 
+    # Preguntas relacionadas con fallas del preservativo.
     if re.search(
         r"\b(rompio|fallo|roto|rompe)\b.{0,30}\b(condon|preservativo)\b|"
         r"\b(condon|preservativo)\b.{0,30}\b(rompio|fallo|roto|rompe)\b",
@@ -236,18 +280,32 @@ def answer_question(question):
     ):
         return _format_answer(_faq("que-es"))
 
+    # Preguntas generales sobre anticoncepción de emergencia.
+    if emergency and matches(
+        n,
+        r"\b(que es|para que|sirve|funciona|anticonceptiv\w*|"
+        r"pastilla|pildora|anticoncepcion)\b",
+    ):
+        return _format_answer(_faq("que-es"))
+
+    # Búsqueda por similitud con la biblioteca disponible.
     ranked = sorted(
-        ((_similarity(q, faq), faq) for faq in get_data()["faqs"]),
+        (
+            (_similarity(q, faq), faq)
+            for faq in get_data()["faqs"]
+        ),
         key=lambda pair: pair[0],
         reverse=True,
     )
+
     if not ranked or ranked[0][0] < 1.45:
         return _uncertain()
+
     return _format_answer(ranked[0][1])
 
 
 def _near_negation(text, match, distance=40):
-    """Busca negación cercana previa; aproximación, no análisis sintáctico."""
+    """Detección aproximada de negaciones próximas."""
     preceding = text[max(0, match.start() - distance):match.start()]
     return bool(re.search(
         r"\b(no|nunca|tampoco|ni|sin)\b(?:\W+\w+){0,4}\W*$",
@@ -258,6 +316,7 @@ def _near_negation(text, match, distance=40):
 def misconception_codes(text):
     n = normalize(text)
     errors = []
+
     for match in re.finditer(
         r"\b(provoca|produce|causa|genera|es|equivale a|"
         r"interrumpe|termina|elimina)\s+"
@@ -289,11 +348,13 @@ def misconception_codes(text):
         if not _near_negation(n, match):
             errors.append("sti_protection")
             break
+
     return list(dict.fromkeys(errors))
 
 
 def detected_concepts(text):
     n = normalize(text)
+
     found = {
         "prevent": matches(
             n,
@@ -303,6 +364,7 @@ def detected_concepts(text):
             r"\b(embarazo|embarazada)\b.{0,40}"
             r"\b(previen|evit|impid)\w*",
         ),
+
         "no_abortion": matches(
             n,
             r"\b(no|nunca|tampoco)\b.{0,35}"
@@ -310,7 +372,13 @@ def detected_concepts(text):
             r"\b(no es abortiva|no provoca aborto|no causa un aborto|"
             r"no termina un embarazo)",
         ),
-        "five_days": matches(n, r"\b(5|cinco)\s+dias\b", r"\b120\s+horas\b"),
+
+        "five_days": matches(
+            n,
+            r"\b(5|cinco)\s+dias\b",
+            r"\b120\s+horas\b",
+        ),
+
         "earlier": matches(
             n,
             r"\b(lo antes posible|cuanto antes|mas pronto|"
@@ -318,6 +386,7 @@ def detected_concepts(text):
             r"\b(antes|pronto|rapido)\b.{0,40}"
             r"\b(mejor|eficaz|efectiv)\w*",
         ),
+
         "not_sti": matches(
             n,
             r"\b(no|nunca|tampoco)\b.{0,32}"
@@ -326,10 +395,13 @@ def detected_concepts(text):
             r"\b(its|ets|vih|infecciones)\b.{0,30}"
             r"\b(no protege|no previene)",
         ),
+
         "condom": matches(
-            n, r"\b(condon|condones|preservativo|preservativos)\b"
+            n,
+            r"\b(condon|condones|preservativo|preservativos)\b",
         ),
     }
+
     return found
 
 
@@ -338,10 +410,13 @@ MISCONCEPTION_FEEDBACK = {
         "Cuidado: la anticoncepción de emergencia no provoca abortos "
         "ni interrumpe embarazos establecidos."
     ),
+
     "wrong_window": (
         "Revisa los plazos: hay opciones de anticoncepción de emergencia "
-        "hasta cinco días (120 horas), según el método. Conviene actuar cuanto antes."
+        "hasta cinco días (120 horas), según el método. "
+        "Conviene actuar cuanto antes."
     ),
+
     "sti_protection": (
         "La anticoncepción de emergencia no protege contra infecciones "
         "de transmisión sexual."
@@ -350,36 +425,75 @@ MISCONCEPTION_FEEDBACK = {
 
 
 def assess(lesson_id, response, phase="pre"):
-    lessons = {entry["id"]: entry for entry in get_data()["lessons"]}
+    lessons = {
+        entry["id"]: entry
+        for entry in get_data()["lessons"]
+    }
+
     if lesson_id not in lessons:
         raise ValueError("Lección no disponible")
+
     if phase not in ("pre", "post"):
         raise ValueError("La fase debe ser pre o post")
+
     answer = response.strip()
+
     if not 1 <= len(answer) <= 1200:
-        raise ValueError("La explicación debe contener entre 1 y 1200 caracteres")
+        raise ValueError(
+            "La explicación debe contener entre 1 y 1200 caracteres"
+        )
 
     lesson = lessons[lesson_id]
     identified = detected_concepts(answer)
+
     errors = [
         code for code in misconception_codes(answer)
         if code in lesson["misconceptions"]
     ]
-    covered = [c for c in lesson["concepts"] if identified.get(c["id"], False)]
-    missing = [c for c in lesson["concepts"] if not identified.get(c["id"], False)]
-    coverage = round(100 * len(covered) / max(1, len(lesson["concepts"])))
+
+    covered = [
+        c for c in lesson["concepts"]
+        if identified.get(c["id"], False)
+    ]
+
+    missing = [
+        c for c in lesson["concepts"]
+        if not identified.get(c["id"], False)
+    ]
+
+    coverage = round(
+        100 * len(covered) / max(1, len(lesson["concepts"]))
+    )
+
     score = min(coverage, 25) if errors else coverage
+
     status = (
         "misconception" if errors else
         "complete" if not missing else "partial"
     )
+
     summaries = {
-        "complete": "Identificaste los conceptos centrales de esta explicación.",
-        "partial": "Hay elementos importantes que aún podemos aclarar.",
-        "misconception": "Detecté una posible idea incorrecta que conviene revisar.",
+        "complete": (
+            "Identificaste los conceptos centrales de esta explicación."
+        ),
+        "partial": (
+            "Hay elementos importantes que aún podemos aclarar."
+        ),
+        "misconception": (
+            "Detecté una posible idea incorrecta que conviene revisar."
+        ),
     }
-    feedback = [MISCONCEPTION_FEEDBACK[x] for x in errors]
-    feedback += [concept["hint"] for concept in missing]
+
+    feedback = [
+        MISCONCEPTION_FEEDBACK[x]
+        for x in errors
+    ]
+
+    feedback += [
+        concept["hint"]
+        for concept in missing
+    ]
+
     if not feedback:
         feedback = [
             "Buen trabajo. Para una situación personal, consulta con "
@@ -397,7 +511,7 @@ def assess(lesson_id, response, phase="pre"):
         "missing": [c["name"] for c in missing],
         "misconceptions": errors,
         "feedback": feedback,
-        "rubric_version": "heuristic-es-v0.3",
+        "rubric_version": "heuristic-es-v0.4",
         "interpretation": (
             "Índice exploratorio basado en reglas lingüísticas. "
             "No es una evaluación clínica validada."
@@ -407,14 +521,22 @@ def assess(lesson_id, response, phase="pre"):
 
 def catalog():
     data = get_data()
+
     return {
         "locale": data["locale"],
+        "engine_version": ENGINE_VERSION,
         "module": data["module"],
         "version": data["version"],
         "review_status": data["review_status"],
+
         "faqs": [
-            {"id": x["id"], "label": x["label"]} for x in data["faqs"]
+            {
+                "id": x["id"],
+                "label": x["label"],
+            }
+            for x in data["faqs"]
         ],
+
         "lessons": [
             {
                 "id": x["id"],
@@ -424,5 +546,6 @@ def catalog():
             }
             for x in data["lessons"]
         ],
+
         "sources": data["sources"],
     }
