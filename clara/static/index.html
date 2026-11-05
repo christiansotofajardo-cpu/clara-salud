@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+        content="CLARA Salud: información sanitaria confiable, comprensión guiada y orientación accesible.">
+
+  <meta name="theme-color" content="#f8fafb">
+
+  <title>CLARA Salud | Comprender para decidir</title>
+
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">
+  Saltar al contenido
+</a>
+
+<div class="app-shell">
+
+  <!-- CABECERA -->
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="/" aria-label="CLARA Salud">
+        <span class="brand-symbol" aria-hidden="true">
+          C
+        </span>
+
+        <span class="brand-text">
+          <strong>CLARA</strong>
+          <small>Salud</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+
+        <span class="header-label"
+              data-i18n="prototype">
+          Prototipo educativo
+        </span>
+
+        <div class="language-switch"
+             role="group"
+             aria-label="Seleccionar idioma">
+
+          <button type="button"
+                  class="lang-button active"
+                  id="lang-es"
+                  data-lang="es"
+                  aria-pressed="true">
+            ES
+          </button>
+
+          <button type="button"
+                  class="lang-button"
+                  id="lang-en"
+                  data-lang="en"
+                  aria-pressed="false">
+            EN
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- PRESENTACIÓN -->
+
+    <section class="hero">
+
+      <div class="container hero-layout">
+
+        <div class="hero-copy">
+
+          <p class="eyebrow" data-i18n="eyebrow">
+            TECNOLOGÍA PARA COMPRENDER MEJOR
+          </p>
+
+          <h1 data-i18n="heroTitle">
+            Tu salud merece
+            respuestas claras.
+          </h1>
+
+          <p class="hero-description"
+             data-i18n="heroDescription">
+            Haz preguntas, recibe información
+            confiable y comprueba lo que has
+            comprendido. CLARA te acompaña
+            paso a paso, con explicaciones
+            sencillas y sin juicios.
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="#experience"
+               class="primary-link"
+               data-i18n="start">
+              Comenzar ahora
+            </a>
+
+            <span class="hero-note"
+                  data-i18n="freeAccess">
+              Acceso gratuito · Sin registro
+            </span>
+
+          </div>
+
+        </div>
+
+        <aside class="hero-feature"
+               aria-label="Método CLARA">
+
+          <div class="feature-top">
+
+            <span class="feature-label"
+                  data-i18n="ourApproach">
+              NUESTRO ENFOQUE
+            </span>
+
+            <span class="feature-number">
+              01 — 04
+            </span>
+
+          </div>
+
+          <div class="feature-body">
+
+            <div class="feature-step">
+              <span class="step-number">01</span>
+              <div>
+                <h3 data-i18n="stepOne">
+                  Pregunta
+                </h3>
+                <p data-i18n="stepOneDesc">
+                  Expresa tus dudas libremente.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-step">
+              <span class="step-number">02</span>
+              <div>
+                <h3 data-i18n="stepTwo">
+                  Comprende
+                </h3>
+                <p data-i18n="stepTwoDesc">
+                  Recibe información clara y fundamentada.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-step">
+              <span class="step-number">03</span>
+              <div>
+                <h3 data-i18n="stepThree">
+                  Explica
+                </h3>
+                <p data-i18n="stepThreeDesc">
+                  Cuenta con tus palabras qué entendiste.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-step">
+              <span class="step-number">04</span>
+              <div>
+                <h3 data-i18n="stepFour">
+                  Aclara
+                </h3>
+                <p data-i18n="stepFourDesc">
+                  Identifica dudas y mejora tu comprensión.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+    <!-- PRINCIPIOS DE CONFIANZA -->
+
+    <section class="trust-strip"
+             aria-label="Características">
+
+      <div class="container trust-inner">
+
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true">
+            ✓
+          </span>
+          <span data-i18n="trusted">
+            Fuentes identificadas
+          </span>
+        </div>
+
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true">
+            ✓
+          </span>
+          <span data-i18n="private">
+            Sin registro personal
+          </span>
+        </div>
+
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true">
+            ✓
+          </span>
+          <span data-i18n="languages">
+            Español e inglés
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- EXPERIENCIA PRINCIPAL -->
+
+    <section class="experience"
+             id="experience">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow"
+             data-i18n="experienceLabel">
+            EXPLORA CLARA
+          </p>
+
+          <h2 id="experience-heading"
+              data-i18n="experienceTitle">
+            Un espacio para resolver tus dudas.
+          </h2>
+
+          <p data-i18n="experienceDescription">
+            Comienza con una pregunta o practica
+            cómo explicar lo que comprendiste.
+          </p>
+
+        </div>
+
+        <div class="workspace">
+
+          <!-- PANEL LATERAL -->
+
+          <aside class="workspace-sidebar">
+
+            <div class="module-card">
+
+              <span class="module-label"
+                    data-i18n="currentModule">
+                MÓDULO DISPONIBLE
+              </span>
+
+              <h3 data-i18n="moduleTitle">
+                Anticoncepción de emergencia
+              </h3>
+
+              <p data-i18n="moduleDescription">
+                Información esencial para comprender
+                métodos, plazos, seguridad y dudas
+                frecuentes.
+              </p>
+
+              <span class="module-status"
+                    data-i18n="moduleStatus">
+                Versión educativa piloto
+              </span>
+
+            </div>
+
+            <div class="sidebar-note">
+
+              <h3 data-i18n="importantTitle">
+                Información importante
+              </h3>
+
+              <p data-i18n="importantText">
+                CLARA es una herramienta educativa
+                experimental. Sus contenidos están
+                pendientes de revisión clínica y
+                no sustituyen una consulta médica.
+              </p>
+
+              <p data-i18n="urgentText">
+                Si necesitas anticoncepción de emergencia,
+                atención por violencia sexual o tienes
+                síntomas graves, busca atención sanitaria
+                cuanto antes.
+              </p>
+
+            </div>
+
+          </aside>
+
+          <!-- PANEL INTERACTIVO -->
+
+          <div class="workspace-main">
+
+            <div class="workspace-tabs"
+                 role="tablist"
+                 aria-label="Herramientas de CLARA">
+
+              <button type="button"
+                      id="tab-ask"
+                      class="tab-button active"
+                      role="tab"
+                      aria-selected="true"
+                      aria-controls="panel-ask"
+                      data-tab="ask"
+                      data-i18n="askTab">
+                Hacer una pregunta
+              </button>
+
+              <button type="button"
+                      id="tab-learn"
+                      class="tab-button"
+                      role="tab"
+                      aria-selected="false"
+                      aria-controls="panel-learn"
+                      data-tab="learn"
+                      data-i18n="learnTab">
+                Comprobar comprensión
+              </button>
+
+            </div>
+
+            <!-- CONSULTAS -->
+
+            <section id="panel-ask"
+                     class="tab-panel"
+                     role="tabpanel"
+                     aria-labelledby="tab-ask">
+
+              <div class="panel-intro">
+
+                <span class="panel-kicker"
+                      data-i18n="askKicker">
+                  CONVERSA CON CLARA
+                </span>
+
+                <h3 data-i18n="askTitle">
+                  ¿Qué te gustaría saber?
+                </h3>
+
+                <p data-i18n="askDescription">
+                  Escribe una pregunta sobre
+                  anticoncepción de emergencia.
+                  CLARA buscará una respuesta
+                  dentro de su biblioteca revisable
+                  de información sanitaria.
+                </p>
+
+              </div>
+
+              <form id="question-form">
+
+                <label for="question-input"
+                       class="field-label"
+                       data-i18n="questionLabel">
+                  Tu pregunta
+                </label>
+
+                <textarea
+                  id="question-input"
+                  rows="3"
+                  maxlength="900"
+                  required
+                  placeholder="Por ejemplo: ¿Cuánto tiempo tengo para utilizarla?"></textarea>
+
+                <div class="form-actions">
+
+                  <span class="input-help"
+                        data-i18n="questionHelp">
+                    No incluyas datos personales.
+                  </span>
+
+                  <button type="submit"
+                          id="ask-button"
+                          class="primary-button"
+                          data-i18n="askButton">
+                    Consultar
+                  </button>
+
+                </div>
+
+              </form>
+
+              <!-- PREGUNTAS SUGERIDAS -->
+
+              <div class="suggestions">
+
+                <h4 data-i18n="suggestionsTitle">
+                  También puedes explorar
+                </h4>
+
+                <div id="faq-list"
+                     class="suggestion-list">
+                </div>
+
+              </div>
+
+              <!-- RESPUESTA -->
+
+              <div id="answer-card"
+                   class="answer-card"
+                   aria-live="polite"
+                   hidden>
+
+                <div class="answer-header">
+
+                  <span class="answer-indicator"
+                        data-i18n="claraAnswers">
+                    CLARA RESPONDE
+                  </span>
+
+                  <h3 id="answer-title"></h3>
+
+                </div>
+
+                <div class="answer-content">
+
+                  <p id="answer-text"></p>
+
+                </div>
+
+                <div class="answer-next">
+
+                  <h4 data-i18n="continueLearning">
+                    Para seguir comprendiendo
+                  </h4>
+
+                  <p id="answer-next-text"></p>
+
+                </div>
+
+                <div class="answer-sources">
+
+                  <h4 data-i18n="sourcesTitle">
+                    Fuentes de información
+                  </h4>
+
+                  <div id="answer-sources-list"></div>
+
+                </div>
+
+              </div>
+
+            </section>
+
+            <!-- TEACH-BACK -->
+
+            <section id="panel-learn"
+                     class="tab-panel"
+                     role="tabpanel"
+                     aria-labelledby="tab-learn"
+                     hidden>
+
+              <div class="panel-intro">
+
+                <span class="panel-kicker"
+                      data-i18n="learnKicker">
+                  APRENDER COMPRENDIENDO
+                </span>
+
+                <h3 data-i18n="learnTitle">
+                  Explica con tus propias palabras.
+                </h3>
+
+                <p data-i18n="learnDescription">
+                  Lee la información, explica
+                  qué comprendiste y recibe
+                  una retroalimentación para
+                  aclarar conceptos importantes.
+                </p>
+
+              </div>
+
+              <div class="lesson-picker">
+
+                <label for="lesson-select"
+                       class="field-label"
+                       data-i18n="lessonLabel">
+                  Elige un tema
+                </label>
+
+                <select id="lesson-select">
+                </select>
+
+              </div>
+
+              <div class="lesson-card">
+
+                <span class="lesson-kicker"
+                      data-i18n="informationLabel">
+                  INFORMACIÓN PARA COMPRENDER
+                </span>
+
+                <h4 id="lesson-title"></h4>
+
+                <p id="lesson-intro"></p>
+
+              </div>
+
+              <div class="teachback-question">
+
+                <span class="lesson-kicker"
+                      data-i18n="yourTurn">
+                  AHORA ES TU TURNO
+                </span>
+
+                <h4 id="lesson-question"></h4>
+
+              </div>
+
+              <form id="assessment-form">
+
+                <label for="assessment-response"
+                       class="field-label"
+                       data-i18n="explanationLabel">
+                  Tu explicación
+                </label>
+
+                <textarea
+                  id="assessment-response"
+                  rows="5"
+                  maxlength="1200"
+                  required
+                  placeholder="Escribe aquí lo que comprendiste..."></textarea>
+
+                <div class="form-actions">
+
+                  <span id="phase-indicator"
+                        class="phase-indicator">
+                    Evaluación inicial
+                  </span>
+
+                  <button type="submit"
+                          id="assess-button"
+                          class="primary-button"
+                          data-i18n="assessButton">
+                    Revisar comprensión
+                  </button>
+
+                </div>
+
+              </form>
+
+              <!-- RETROALIMENTACIÓN -->
+
+              <div id="assessment-result"
+                   class="assessment-result"
+                   aria-live="polite"
+                   hidden>
+
+                <div class="result-header">
+
+                  <span class="result-kicker"
+                        data-i18n="feedbackLabel">
+                    RETROALIMENTACIÓN
+                  </span>
+
+                  <h3 id="result-summary"></h3>
+
+                </div>
+
+                <div class="result-score">
+
+                  <span data-i18n="coverageLabel">
+                    Cobertura de conceptos
+                  </span>
+
+                  <strong id="result-score">—</strong>
+
+                </div>
+
+                <div class="result-progress">
+                  <div id="result-progress-bar"></div>
+                </div>
+
+                <div class="result-feedback">
+
+                  <h4 data-i18n="feedbackDetails">
+                    Revisemos algunos conceptos
+                  </h4>
+
+                  <ul id="feedback-list"></ul>
+
+                </div>
+
+                <p class="result-disclaimer"
+                   data-i18n="scoreDisclaimer">
+                  Esta evaluación es exploratoria,
+                  basada en reglas lingüísticas.
+                  No corresponde a una medición
+                  clínica validada.
+                </p>
+
+                <button type="button"
+                        id="repeat-button"
+                        class="secondary-button"
+                        data-i18n="retryButton"
+                        hidden>
+                  Intentar nuevamente
+                </button>
+
+              </div>
+
+              <div id="comparison-card"
+                   class="comparison-card"
+                   aria-live="polite"
+                   hidden>
+              </div>
+
+            </section>
+
+          </div>
+        </div>
+
+        <div id="app-notice"
+             class="app-notice"
+             role="alert"
+             hidden>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROPÓSITO -->
+
+    <section class="mission-section">
+
+      <div class="container mission-inner">
+
+        <div>
+
+          <p class="eyebrow"
+             data-i18n="missionLabel">
+            NUESTRA MISIÓN
+          </p>
+
+          <h2 data-i18n="missionTitle">
+            Informar no siempre significa comprender.
+          </h2>
+
+        </div>
+
+        <p data-i18n="missionDescription">
+          CLARA busca transformar la comunicación
+          sanitaria en una experiencia más clara,
+          participativa y verificable.
+          Nuestro objetivo es contribuir a que
+          mujeres y adolescentes puedan acceder
+          a información comprensible y tomar
+          decisiones mejor informadas.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <strong>CLARA Salud</strong>
+        <p data-i18n="footerMessage">
+          Comprender para decidir.
+        </p>
+      </div>
+
+      <div class="footer-meta">
+
+        <span>
+          © 2026 IDE SpA
+        </span>
+
+        <span data-i18n="openSource">
+          Tecnología abierta e independiente
+        </span>
+
+      </div>
+
+    </div>
+
+    <div class="container footer-disclaimer">
+      <p data-i18n="footerDisclaimer">
+        Prototipo educativo en desarrollo.
+        Contenidos pendientes de revisión clínica.
+        No proporciona diagnósticos, prescripciones
+        ni atención sanitaria individualizada.
+      </p>
+    </div>
+
+  </footer>
+
+</div>
+
+</body>
+</html>
