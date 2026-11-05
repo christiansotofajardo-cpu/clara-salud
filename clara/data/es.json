@@ -1,0 +1,333 @@
+
+{
+  "locale": "es-CL",
+  "module": "Anticoncepción de emergencia",
+  "version": "0.1.0",
+  "review_status": "BORRADOR EDUCATIVO — PENDIENTE REVISIÓN CLÍNICA",
+  "sources": [
+    {
+      "id": "who",
+      "name": "OMS · Anticoncepción de urgencia",
+      "url": "https://www.who.int/es/news-room/fact-sheets/detail/emergency-contraception"
+    },
+    {
+      "id": "cdc",
+      "name": "CDC · Emergency contraception",
+      "url": "https://www.cdc.gov/contraception/hcp/usspr/emergency-contraception.html"
+    },
+    {
+      "id": "minsal",
+      "name": "MINSAL Chile · Salud sexual y reproductiva",
+      "url": "https://www.minsal.cl/salud-sexual-y-reproductiva-preguntas-frecuentes/"
+    },
+    {
+      "id": "pep",
+      "name": "OMS · Profilaxis posterior a exposición VIH",
+      "url": "https://www.who.int/publications/i/item/9789240095137"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "que-es",
+      "label": "¿Qué es la anticoncepción de emergencia?",
+      "keywords": [
+        "que es",
+        "para que sirve",
+        "anticoncepcion emergencia",
+        "pastilla del dia despues",
+        "pildora del dia despues",
+        "prevenir embarazo",
+        "fallo condon",
+        "rompio condon",
+        "condon fallo",
+        "condon roto",
+        "preservativo roto",
+        "fallo preservativo"
+      ],
+      "answer": "La anticoncepción de emergencia reúne métodos que pueden prevenir un embarazo después de una relación sexual sin protección o cuando falla un método anticonceptivo. Incluye píldoras y el dispositivo intrauterino (DIU) de cobre. Es importante actuar cuanto antes y consultar a un servicio de salud o farmacia para conocer las opciones disponibles.",
+      "next": "Puedes preguntar por los métodos, por los plazos o por su funcionamiento.",
+      "source_ids": ["who", "cdc"]
+    },
+    {
+      "id": "cuando",
+      "label": "¿Cuánto tiempo tengo para utilizarla?",
+      "keywords": [
+        "cuantas horas",
+        "cuanto tiempo",
+        "plazo",
+        "5 dias",
+        "cinco dias",
+        "120 horas",
+        "72 horas",
+        "ayer",
+        "hace dos dias",
+        "cuando tomar",
+        "tiempo maximo",
+        "4 dias",
+        "cuatro dias",
+        "2 dias",
+        "dos dias",
+        "3 dias",
+        "tres dias",
+        "cuanto tarda",
+        "plazo maximo",
+        "tomarla luego",
+        "pasaron dias"
+      ],
+      "answer": "Los métodos de anticoncepción de emergencia se utilizan lo antes posible y, en general, dentro de los cinco días posteriores a la relación sexual. El tipo de método importa: las píldoras con ulipristal y levonorgestrel pueden utilizarse hasta cinco días, aunque el levonorgestrel puede ser menos eficaz después de los primeros tres días. El DIU de cobre, colocado por personal sanitario, es la opción más eficaz. Si te preocupa un caso concreto, busca atención cuanto antes: no esperes a completar este cuestionario.",
+      "next": "¿Quieres conocer la diferencia entre píldoras y DIU de cobre?",
+      "source_ids": ["who", "cdc"]
+    },
+    {
+      "id": "metodos",
+      "label": "¿Qué métodos existen?",
+      "keywords": [
+        "tipos",
+        "metodos",
+        "opciones",
+        "ulipristal",
+        "levonorgestrel",
+        "diu",
+        "cobre",
+        "diferencia entre pastillas"
+      ],
+      "answer": "Existen píldoras de anticoncepción de emergencia, entre ellas las que contienen levonorgestrel o acetato de ulipristal, y el DIU de cobre, que coloca personal sanitario. La opción más adecuada depende del tiempo transcurrido y de circunstancias individuales. El DIU de cobre es el método de emergencia más eficaz y puede continuar como anticonceptivo regular. Un profesional de salud puede ayudarte a elegir.",
+      "next": "También puedo explicar cómo actúan y en qué se diferencian de un aborto.",
+      "source_ids": ["who", "cdc"]
+    },
+    {
+      "id": "aborto",
+      "label": "¿Produce un aborto?",
+      "keywords": [
+        "aborto",
+        "abortiva",
+        "interrumpe embarazo",
+        "embrion",
+        "mata embrion",
+        "embarazo establecido",
+        "implantacion"
+      ],
+      "answer": "No. Las píldoras anticonceptivas de emergencia actúan principalmente evitando o retrasando la ovulación. No provocan un aborto ni interrumpen un embarazo establecido. El DIU de cobre actúa impidiendo la fecundación. Si sospechas que ya existe un embarazo, consulta con un profesional para recibir orientación apropiada.",
+      "next": "¿Te gustaría comprobar con tus propias palabras la diferencia entre prevenir e interrumpir un embarazo?",
+      "source_ids": ["who"]
+    },
+    {
+      "id": "eficacia",
+      "label": "¿Es 100 % efectiva?",
+      "keywords": [
+        "efectiva",
+        "eficacia",
+        "100",
+        "seguro",
+        "garantiza",
+        "funciona siempre",
+        "fallar",
+        "probabilidad",
+        "embarazada igual"
+      ],
+      "answer": "Ningún método de anticoncepción de emergencia garantiza prevenir el embarazo en todas las situaciones. Su eficacia depende del método utilizado y del tiempo transcurrido. El DIU de cobre es la opción más eficaz. Tomar medidas pronto es importante; si tienes dudas sobre un posible embarazo después de utilizarla, solicita orientación y considera una prueba de embarazo cuando corresponda.",
+      "next": "Puedes consultar cuándo realizar una prueba de embarazo.",
+      "source_ids": ["who", "cdc"]
+    },
+    {
+      "id": "its",
+      "label": "¿Protege de las infecciones de transmisión sexual?",
+      "keywords": [
+        "its",
+        "ets",
+        "vih",
+        "sida",
+        "infeccion sexual",
+        "enfermedades de transmision",
+        "preservativo",
+        "condon"
+      ],
+      "answer": "No. La anticoncepción de emergencia sirve para prevenir un embarazo, pero no protege contra infecciones de transmisión sexual, incluido el VIH. Los preservativos ayudan a reducir el riesgo de estas infecciones. Si hubo una posible exposición al VIH, la profilaxis posterior a la exposición (PEP) requiere una evaluación médica urgente y, cuando está indicada, debe iniciarse lo antes posible, como máximo dentro de 72 horas.",
+      "next": "Si hubo violencia sexual o una posible exposición al VIH, busca atención sanitaria urgente.",
+      "source_ids": ["cdc", "pep"]
+    },
+    {
+      "id": "efectos",
+      "label": "¿Qué efectos secundarios puede tener?",
+      "keywords": [
+        "efectos secundarios",
+        "nauseas",
+        "vomitos",
+        "dolor cabeza",
+        "sangrado",
+        "cansancio",
+        "molestias",
+        "hace mal",
+        "segura",
+        "nausea",
+        "vomite",
+        "vomito",
+        "vomitando"
+      ],
+      "answer": "Las píldoras de anticoncepción de emergencia pueden provocar náuseas, cansancio o cambios leves en el sangrado menstrual. En general, estos efectos son leves y transitorios. Si presentas dolor abdominal muy intenso, desmayo o sangrado abundante, solicita evaluación médica urgente. Si vomitaste después de tomar una píldora, consulta cuanto antes a un profesional o farmacéutico porque puede ser necesario repetirla, según el método y el intervalo transcurrido.",
+      "next": "¿Quieres saber qué observar después de utilizarla?",
+      "source_ids": ["who"]
+    },
+    {
+      "id": "periodo",
+      "label": "¿Qué pasa si no llega mi menstruación?",
+      "keywords": [
+        "menstruacion",
+        "regla",
+        "atraso",
+        "retraso menstrual",
+        "periodo",
+        "prueba embarazo",
+        "test embarazo",
+        "sangre",
+        "no me llega"
+      ],
+      "answer": "La menstruación puede adelantarse o retrasarse después de usar anticoncepción de emergencia. Si no se produce un sangrado menstrual dentro de las tres semanas siguientes, realiza una prueba de embarazo o consulta con un servicio sanitario. Si aparece dolor abdominal intenso, desmayo o sangrado abundante, busca atención urgente.",
+      "next": "Puedo explicar por qué la anticoncepción de emergencia no garantiza prevenir todos los embarazos.",
+      "source_ids": ["cdc", "who"]
+    },
+    {
+      "id": "fertilidad",
+      "label": "¿Afecta mi fertilidad futura?",
+      "keywords": [
+        "fertilidad futura",
+        "afecta la fertilidad",
+        "infertilidad",
+        "esterilidad",
+        "tener hijos despues"
+      ],
+      "answer": "La OMS señala que las píldoras de anticoncepción de emergencia no dañan la fertilidad futura y que esta puede volver sin retraso después de utilizarlas. Esto no significa que todas las situaciones de salud sean iguales: si tienes dudas sobre fertilidad o síntomas particulares, consulta a un profesional sanitario.",
+      "next": "¿Quieres conocer los posibles efectos secundarios transitorios?",
+      "source_ids": ["who"]
+    },
+    {
+      "id": "repetir",
+      "label": "¿Se puede utilizar más de una vez?",
+      "keywords": [
+        "varias veces",
+        "otra vez",
+        "repetir",
+        "frecuente",
+        "seguido",
+        "reutilizar",
+        "mas de una vez"
+      ],
+      "answer": "Las píldoras de anticoncepción de emergencia pueden usarse en más de una ocasión, pero no están pensadas como método anticonceptivo habitual. Si necesitas utilizarlas con frecuencia, un equipo de salud puede ofrecerte opciones regulares más eficaces y adecuadas a tus necesidades. La anticoncepción de emergencia no protege frente a relaciones posteriores.",
+      "next": "¿Quieres conocer dónde solicitar orientación sobre anticoncepción regular?",
+      "source_ids": ["who", "cdc"]
+    },
+    {
+      "id": "despues",
+      "label": "¿Qué hago después de usarla?",
+      "keywords": [
+        "despues de tomar",
+        "despues de usar",
+        "que hago ahora",
+        "continuar anticonceptivo",
+        "proteccion despues",
+        "condon despues",
+        "control"
+      ],
+      "answer": "Después de utilizar anticoncepción de emergencia, es importante planificar la protección anticonceptiva de las relaciones posteriores. El momento para iniciar o retomar anticonceptivos hormonales depende de la píldora utilizada: después de ulipristal se recomienda esperar al menos cinco días antes de iniciarlos o retomarlos, mientras que después de levonorgestrel pueden iniciarse o retomarse inmediatamente. Consulta con personal sanitario para elegir el método y saber cuánto tiempo utilizar preservativo como respaldo.",
+      "next": "Si tu menstruación no aparece dentro de tres semanas, hazte una prueba de embarazo.",
+      "source_ids": ["cdc"]
+    },
+    {
+      "id": "acceso",
+      "label": "¿Dónde puedo solicitar orientación en Chile?",
+      "keywords": [
+        "chile",
+        "cesfam",
+        "fonasa",
+        "donde conseguir",
+        "farmacia",
+        "comprar",
+        "acceso",
+        "donde obtener",
+        "consultorio",
+        "matrona"
+      ],
+      "answer": "En Chile puedes solicitar orientación sobre anticoncepción en un CESFAM, otro centro de atención primaria o una farmacia. La disponibilidad concreta debe confirmarse en el establecimiento. Si la necesidad es reciente, busca atención cuanto antes.",
+      "next": "Puedo explicar qué información conviene conocer sobre los plazos de anticoncepción de emergencia.",
+      "source_ids": ["minsal"]
+    },
+    {
+      "id": "violencia",
+      "label": "¿Qué hago si hubo una agresión sexual?",
+      "keywords": [
+        "agresion sexual",
+        "abuso sexual",
+        "violacion",
+        "me obligaron",
+        "sin consentimiento",
+        "violencia sexual",
+        "forzaron",
+        "violaron",
+        "abusaron",
+        "me forzaron"
+      ],
+      "answer": "Si hubo una agresión sexual, mereces recibir atención y apoyo sin culpabilización. Busca un servicio de urgencias o un centro de salud lo antes posible: pueden evaluar necesidades de atención, anticoncepción de emergencia, prevención de infecciones y apoyo especializado. Ante posible exposición al VIH, algunas medidas preventivas tienen una ventana de hasta 72 horas, por lo que es importante no demorar la consulta. Si existe peligro inmediato, contacta los servicios de emergencia de tu localidad.",
+      "next": "No necesitas contar detalles íntimos aquí para recibir orientación general.",
+      "source_ids": ["who", "pep"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "objetivo",
+      "title": "¿Qué hace y qué no hace?",
+      "intro": "La anticoncepción de emergencia puede prevenir un embarazo después de una relación sexual sin protección. Las píldoras actúan principalmente retrasando o evitando la ovulación; no interrumpen un embarazo establecido.",
+      "question": "Explica con tus palabras qué puede hacer la anticoncepción de emergencia y qué NO puede hacer respecto de un embarazo ya establecido.",
+      "concepts": [
+        {
+          "id": "prevent",
+          "name": "Prevención del embarazo",
+          "hint": "Su finalidad es prevenir un embarazo después de una relación sexual."
+        },
+        {
+          "id": "no_abortion",
+          "name": "No interrumpe un embarazo establecido",
+          "hint": "No causa un aborto ni interrumpe un embarazo ya establecido."
+        }
+      ],
+      "misconceptions": ["abortion"]
+    },
+    {
+      "id": "tiempo",
+      "title": "Actuar cuanto antes",
+      "intro": "La anticoncepción de emergencia se usa lo antes posible, generalmente dentro de los cinco días posteriores a la relación sexual. El método elegido influye en su eficacia.",
+      "question": "Explica por qué importa el tiempo y cuál es la ventana general de uso de la anticoncepción de emergencia.",
+      "concepts": [
+        {
+          "id": "five_days",
+          "name": "Ventana general de cinco días",
+          "hint": "En general, los métodos pueden utilizarse dentro de cinco días (120 horas)."
+        },
+        {
+          "id": "earlier",
+          "name": "Cuanto antes, mejor",
+          "hint": "Se recomienda actuar lo antes posible porque la eficacia puede variar según el tiempo y el método."
+        }
+      ],
+      "misconceptions": ["wrong_window"]
+    },
+    {
+      "id": "proteccion",
+      "title": "Embarazo e infecciones",
+      "intro": "La anticoncepción de emergencia intenta prevenir un embarazo. No protege de infecciones de transmisión sexual. Los preservativos reducen el riesgo de muchas ITS.",
+      "question": "Explica si la anticoncepción de emergencia protege de las ITS y qué medida puede ayudar a reducir ese riesgo.",
+      "concepts": [
+        {
+          "id": "not_sti",
+          "name": "No protege de ITS",
+          "hint": "La anticoncepción de emergencia no previene infecciones de transmisión sexual."
+        },
+        {
+          "id": "condom",
+          "name": "Preservativos para reducir el riesgo",
+          "hint": "Los preservativos ayudan a reducir el riesgo de ITS."
+        }
+      ],
+      "misconceptions": ["sti_protection"]
+    }
+  ]
+}
